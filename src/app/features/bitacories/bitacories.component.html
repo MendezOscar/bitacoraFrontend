@@ -1,0 +1,41 @@
+<h4>List of bitacory</h4>
+<button type="button" class="btn btn-success mb-2"
+(click)="createBitacory()">
+  <i class="fas fa-plus">Crear</i>
+</button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Date</th>
+      <th scope="col">Activity</th>
+      <th scope="col">Category</th>
+      <th scope="col">Initial Date</th>
+      <th scope="col">Final Date</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr *ngFor="let bitacoty of bitacories">
+            <th scope="row">{{bitacoty.id}}</th>
+            <td>{{bitacoty.date}}</td>
+            <td>{{bitacoty.activity}}</td>
+            <td>{{bitacoty.categoryId}}</td>
+            <td>{{bitacoty.initialDate}}</td>
+            <td>{{bitacoty.finalDate}}</td>
+        <td>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-info"
+                (click)="editBitacory()">
+                    <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button type="button" class="btn btn-danger"
+                (click)="deleteBitacory(bitacoty.id)">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+        </td>
+        </tr>
+    </tbody>
+</table>
+

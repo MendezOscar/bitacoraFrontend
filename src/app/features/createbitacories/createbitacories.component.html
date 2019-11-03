@@ -1,0 +1,69 @@
+<h3>Create Bitacory</h3>
+<form>
+  <div class="form-group">
+    <label for="categoryName"> Date </label>
+    <input
+      name="categoryName"
+      type="text"
+      class="form-control"
+      id="categoryName"
+      placeholder="Introduce "
+      [(ngModel)]="date"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="categoryName"> Activity</label>
+    <input
+      name="categoryName"
+      type="text"
+      class="form-control"
+      id="categoryName"
+      placeholder="Introduce "
+      [(ngModel)]="activity"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="cursoControlSelect">Seleccione el nombre del curso</label>
+    <select
+      name="nombreCurso"
+      class="form-control"
+      id="cursoControlSelect"
+      [(ngModel)]="category"
+    >
+      <option *ngFor="let category of categories" [value]="category.id">{{
+        category.name
+      }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="categoryName"> Initial Date</label>
+    <input
+      name="categoryName"
+      type="text"
+      class="form-control"
+      id="categoryName"
+      placeholder="Introduce "
+      [(ngModel)]="initialDate"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="categoryName"> Final Date</label>
+    <input
+      name="categoryName"
+      type="text"
+      class="form-control"
+      id="categoryName"
+      placeholder="Introduce "
+      [(ngModel)]="finalDate"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="createBitacory()">
+    Save
+  </button>
+  <button type="submit" class="btn btn-light" (click)="cancel()">Cancel</button>
+</form>

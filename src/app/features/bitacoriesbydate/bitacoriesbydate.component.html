@@ -1,0 +1,53 @@
+<h4>List of bitacories by dates</h4>
+<div class="form-group">
+  <label for="categoryName"> Date </label>
+  <input
+    name="categoryName"
+    type="text"
+    class="form-control"
+    id="categoryName"
+    placeholder="Introduce "
+    [(ngModel)]="date1"
+  />
+</div>
+
+<div class="form-group">
+  <label for="categoryName"> Date </label>
+  <input
+    name="categoryName"
+    type="text"
+    class="form-control"
+    id="categoryName"
+    placeholder="Introduce "
+    [(ngModel)]="date2"
+  />
+<br>
+
+  <button type="button" class="btn btn-success mb-2" (click)="getResult()">
+    <i class="fas fa-plus">Show</i>
+  </button>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Date</th>
+        <th scope="col">Activity</th>
+        <th scope="col">Category</th>
+        <th scope="col">Initial Date</th>
+        <th scope="col">Final Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bitacoty of bitacories">
+        <th scope="row">{{ bitacoty.id }}</th>
+        <td>{{ bitacoty.date }}</td>
+        <td>{{ bitacoty.activity }}</td>
+        <td>{{ bitacoty.categoryId }}</td>
+        <td>{{ bitacoty.initialDate }}</td>
+        <td>{{ bitacoty.finalDate }}</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

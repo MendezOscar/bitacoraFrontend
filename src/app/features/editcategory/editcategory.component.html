@@ -1,0 +1,11 @@
+<h3>Create Category</h3>
+<form>
+    <div class="form-group">
+        <label for="categoryName"> Category Name</label>
+        <input name="categoryName" type="text" class="form-control" id="categoryName"
+            placeholder="Introduce " [(ngModel)]="name">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="editCategory()">Save</button>
+    <button type="submit" class="btn btn-light" (click)="cancel()">Cancel</button>
+</form>
+
